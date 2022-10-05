@@ -17,6 +17,12 @@
 		FF40661328EE43A5008FB025 /* EurekaChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40661228EE43A5008FB025 /* EurekaChallengeTests.swift */; };
 		FF40661D28EE43A5008FB025 /* EurekaChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40661C28EE43A5008FB025 /* EurekaChallengeUITests.swift */; };
 		FF40661F28EE43A5008FB025 /* EurekaChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40661E28EE43A5008FB025 /* EurekaChallengeUITestsLaunchTests.swift */; };
+		FF40662F28EE4617008FB025 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40662E28EE4617008FB025 /* File.swift */; };
+		FF40663128EE4641008FB025 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40663028EE4641008FB025 /* AppCoordinator.swift */; };
+		FF40663428EE46B5008FB025 /* MainCoordinatorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40663328EE46B5008FB025 /* MainCoordinatorBase.swift */; };
+		FF40663628EE46DF008FB025 /* CoordinatorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40663528EE46DF008FB025 /* CoordinatorBase.swift */; };
+		FF40663828EE4721008FB025 /* GenericCoordinatorBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40663728EE4721008FB025 /* GenericCoordinatorBase.swift */; };
+		FF40663A28EE476A008FB025 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40663928EE476A008FB025 /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		FF40661828EE43A5008FB025 /* EurekaChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EurekaChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF40661C28EE43A5008FB025 /* EurekaChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaChallengeUITests.swift; sourceTree = "<group>"; };
 		FF40661E28EE43A5008FB025 /* EurekaChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FF40662E28EE4617008FB025 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		FF40663028EE4641008FB025 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FF40663328EE46B5008FB025 /* MainCoordinatorBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorBase.swift; sourceTree = "<group>"; };
+		FF40663528EE46DF008FB025 /* CoordinatorBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorBase.swift; sourceTree = "<group>"; };
+		FF40663728EE4721008FB025 /* GenericCoordinatorBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericCoordinatorBase.swift; sourceTree = "<group>"; };
+		FF40663928EE476A008FB025 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +113,7 @@
 		FF4065F728EE43A3008FB025 /* EurekaChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				FF40663228EE4692008FB025 /* Classses */,
 				FF40662D28EE447E008FB025 /* Protocols */,
 				FF40662C28EE446B008FB025 /* Coordinators */,
 				FF40662B28EE445F008FB025 /* ViewControllers */,
@@ -136,6 +149,7 @@
 		FF40662B28EE445F008FB025 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FF40662E28EE4617008FB025 /* File.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -143,6 +157,7 @@
 		FF40662C28EE446B008FB025 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				FF40663028EE4641008FB025 /* AppCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -150,8 +165,19 @@
 		FF40662D28EE447E008FB025 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				FF40663928EE476A008FB025 /* MainCoordinator.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FF40663228EE4692008FB025 /* Classses */ = {
+			isa = PBXGroup;
+			children = (
+				FF40663328EE46B5008FB025 /* MainCoordinatorBase.swift */,
+				FF40663528EE46DF008FB025 /* CoordinatorBase.swift */,
+				FF40663728EE4721008FB025 /* GenericCoordinatorBase.swift */,
+			);
+			path = Classses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,8 +311,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF40663128EE4641008FB025 /* AppCoordinator.swift in Sources */,
+				FF40663828EE4721008FB025 /* GenericCoordinatorBase.swift in Sources */,
+				FF40662F28EE4617008FB025 /* File.swift in Sources */,
+				FF40663A28EE476A008FB025 /* MainCoordinator.swift in Sources */,
+				FF40663428EE46B5008FB025 /* MainCoordinatorBase.swift in Sources */,
 				FF40660328EE43A3008FB025 /* EurekaChallenge.xcdatamodeld in Sources */,
 				FF4065FD28EE43A3008FB025 /* ViewController.swift in Sources */,
+				FF40663628EE46DF008FB025 /* CoordinatorBase.swift in Sources */,
 				FF4065F928EE43A3008FB025 /* AppDelegate.swift in Sources */,
 				FF4065FB28EE43A3008FB025 /* SceneDelegate.swift in Sources */,
 			);
