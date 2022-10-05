@@ -1,0 +1,648 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF4065F928EE43A3008FB025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4065F828EE43A3008FB025 /* AppDelegate.swift */; };
+		FF4065FB28EE43A3008FB025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4065FA28EE43A3008FB025 /* SceneDelegate.swift */; };
+		FF4065FD28EE43A3008FB025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4065FC28EE43A3008FB025 /* ViewController.swift */; };
+		FF40660028EE43A3008FB025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4065FE28EE43A3008FB025 /* Main.storyboard */; };
+		FF40660328EE43A3008FB025 /* EurekaChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF40660128EE43A3008FB025 /* EurekaChallenge.xcdatamodeld */; };
+		FF40660528EE43A5008FB025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF40660428EE43A5008FB025 /* Assets.xcassets */; };
+		FF40660828EE43A5008FB025 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF40660628EE43A5008FB025 /* LaunchScreen.storyboard */; };
+		FF40661328EE43A5008FB025 /* EurekaChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40661228EE43A5008FB025 /* EurekaChallengeTests.swift */; };
+		FF40661D28EE43A5008FB025 /* EurekaChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40661C28EE43A5008FB025 /* EurekaChallengeUITests.swift */; };
+		FF40661F28EE43A5008FB025 /* EurekaChallengeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40661E28EE43A5008FB025 /* EurekaChallengeUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF40660F28EE43A5008FB025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF4065ED28EE43A3008FB025 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF4065F428EE43A3008FB025;
+			remoteInfo = EurekaChallenge;
+		};
+		FF40661928EE43A5008FB025 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF4065ED28EE43A3008FB025 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF4065F428EE43A3008FB025;
+			remoteInfo = EurekaChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF4065F528EE43A3008FB025 /* EurekaChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EurekaChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF4065F828EE43A3008FB025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF4065FA28EE43A3008FB025 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FF4065FC28EE43A3008FB025 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FF4065FF28EE43A3008FB025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FF40660228EE43A3008FB025 /* EurekaChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EurekaChallenge.xcdatamodel; sourceTree = "<group>"; };
+		FF40660428EE43A5008FB025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FF40660728EE43A5008FB025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FF40660928EE43A5008FB025 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF40660E28EE43A5008FB025 /* EurekaChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EurekaChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF40661228EE43A5008FB025 /* EurekaChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaChallengeTests.swift; sourceTree = "<group>"; };
+		FF40661828EE43A5008FB025 /* EurekaChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EurekaChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF40661C28EE43A5008FB025 /* EurekaChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaChallengeUITests.swift; sourceTree = "<group>"; };
+		FF40661E28EE43A5008FB025 /* EurekaChallengeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EurekaChallengeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF4065F228EE43A3008FB025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF40660B28EE43A5008FB025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF40661528EE43A5008FB025 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF4065EC28EE43A3008FB025 = {
+			isa = PBXGroup;
+			children = (
+				FF4065F728EE43A3008FB025 /* EurekaChallenge */,
+				FF40661128EE43A5008FB025 /* EurekaChallengeTests */,
+				FF40661B28EE43A5008FB025 /* EurekaChallengeUITests */,
+				FF4065F628EE43A3008FB025 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF4065F628EE43A3008FB025 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF4065F528EE43A3008FB025 /* EurekaChallenge.app */,
+				FF40660E28EE43A5008FB025 /* EurekaChallengeTests.xctest */,
+				FF40661828EE43A5008FB025 /* EurekaChallengeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF4065F728EE43A3008FB025 /* EurekaChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				FF40662D28EE447E008FB025 /* Protocols */,
+				FF40662C28EE446B008FB025 /* Coordinators */,
+				FF40662B28EE445F008FB025 /* ViewControllers */,
+				FF4065F828EE43A3008FB025 /* AppDelegate.swift */,
+				FF4065FA28EE43A3008FB025 /* SceneDelegate.swift */,
+				FF4065FC28EE43A3008FB025 /* ViewController.swift */,
+				FF4065FE28EE43A3008FB025 /* Main.storyboard */,
+				FF40660428EE43A5008FB025 /* Assets.xcassets */,
+				FF40660628EE43A5008FB025 /* LaunchScreen.storyboard */,
+				FF40660928EE43A5008FB025 /* Info.plist */,
+				FF40660128EE43A3008FB025 /* EurekaChallenge.xcdatamodeld */,
+			);
+			path = EurekaChallenge;
+			sourceTree = "<group>";
+		};
+		FF40661128EE43A5008FB025 /* EurekaChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF40661228EE43A5008FB025 /* EurekaChallengeTests.swift */,
+			);
+			path = EurekaChallengeTests;
+			sourceTree = "<group>";
+		};
+		FF40661B28EE43A5008FB025 /* EurekaChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FF40661C28EE43A5008FB025 /* EurekaChallengeUITests.swift */,
+				FF40661E28EE43A5008FB025 /* EurekaChallengeUITestsLaunchTests.swift */,
+			);
+			path = EurekaChallengeUITests;
+			sourceTree = "<group>";
+		};
+		FF40662B28EE445F008FB025 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		FF40662C28EE446B008FB025 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		FF40662D28EE447E008FB025 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF4065F428EE43A3008FB025 /* EurekaChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF40662228EE43A5008FB025 /* Build configuration list for PBXNativeTarget "EurekaChallenge" */;
+			buildPhases = (
+				FF4065F128EE43A3008FB025 /* Sources */,
+				FF4065F228EE43A3008FB025 /* Frameworks */,
+				FF4065F328EE43A3008FB025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EurekaChallenge;
+			productName = EurekaChallenge;
+			productReference = FF4065F528EE43A3008FB025 /* EurekaChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF40660D28EE43A5008FB025 /* EurekaChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF40662528EE43A5008FB025 /* Build configuration list for PBXNativeTarget "EurekaChallengeTests" */;
+			buildPhases = (
+				FF40660A28EE43A5008FB025 /* Sources */,
+				FF40660B28EE43A5008FB025 /* Frameworks */,
+				FF40660C28EE43A5008FB025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF40661028EE43A5008FB025 /* PBXTargetDependency */,
+			);
+			name = EurekaChallengeTests;
+			productName = EurekaChallengeTests;
+			productReference = FF40660E28EE43A5008FB025 /* EurekaChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FF40661728EE43A5008FB025 /* EurekaChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF40662828EE43A5008FB025 /* Build configuration list for PBXNativeTarget "EurekaChallengeUITests" */;
+			buildPhases = (
+				FF40661428EE43A5008FB025 /* Sources */,
+				FF40661528EE43A5008FB025 /* Frameworks */,
+				FF40661628EE43A5008FB025 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF40661A28EE43A5008FB025 /* PBXTargetDependency */,
+			);
+			name = EurekaChallengeUITests;
+			productName = EurekaChallengeUITests;
+			productReference = FF40661828EE43A5008FB025 /* EurekaChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF4065ED28EE43A3008FB025 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					FF4065F428EE43A3008FB025 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					FF40660D28EE43A5008FB025 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = FF4065F428EE43A3008FB025;
+					};
+					FF40661728EE43A5008FB025 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = FF4065F428EE43A3008FB025;
+					};
+				};
+			};
+			buildConfigurationList = FF4065F028EE43A3008FB025 /* Build configuration list for PBXProject "EurekaChallenge" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF4065EC28EE43A3008FB025;
+			productRefGroup = FF4065F628EE43A3008FB025 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF4065F428EE43A3008FB025 /* EurekaChallenge */,
+				FF40660D28EE43A5008FB025 /* EurekaChallengeTests */,
+				FF40661728EE43A5008FB025 /* EurekaChallengeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF4065F328EE43A3008FB025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF40660828EE43A5008FB025 /* LaunchScreen.storyboard in Resources */,
+				FF40660528EE43A5008FB025 /* Assets.xcassets in Resources */,
+				FF40660028EE43A3008FB025 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF40660C28EE43A5008FB025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF40661628EE43A5008FB025 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF4065F128EE43A3008FB025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF40660328EE43A3008FB025 /* EurekaChallenge.xcdatamodeld in Sources */,
+				FF4065FD28EE43A3008FB025 /* ViewController.swift in Sources */,
+				FF4065F928EE43A3008FB025 /* AppDelegate.swift in Sources */,
+				FF4065FB28EE43A3008FB025 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF40660A28EE43A5008FB025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF40661328EE43A5008FB025 /* EurekaChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF40661428EE43A5008FB025 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF40661D28EE43A5008FB025 /* EurekaChallengeUITests.swift in Sources */,
+				FF40661F28EE43A5008FB025 /* EurekaChallengeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF40661028EE43A5008FB025 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF4065F428EE43A3008FB025 /* EurekaChallenge */;
+			targetProxy = FF40660F28EE43A5008FB025 /* PBXContainerItemProxy */;
+		};
+		FF40661A28EE43A5008FB025 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF4065F428EE43A3008FB025 /* EurekaChallenge */;
+			targetProxy = FF40661928EE43A5008FB025 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF4065FE28EE43A3008FB025 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF4065FF28EE43A3008FB025 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FF40660628EE43A5008FB025 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF40660728EE43A5008FB025 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF40662028EE43A5008FB025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FF40662128EE43A5008FB025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FF40662328EE43A5008FB025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R3RKAUHWR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EurekaChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Olivera-Luciano.EurekaChallenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FF40662428EE43A5008FB025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R3RKAUHWR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EurekaChallenge/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Olivera-Luciano.EurekaChallenge";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FF40662628EE43A5008FB025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R3RKAUHWR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Olivera-Luciano.EurekaChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EurekaChallenge.app/EurekaChallenge";
+			};
+			name = Debug;
+		};
+		FF40662728EE43A5008FB025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R3RKAUHWR;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Olivera-Luciano.EurekaChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EurekaChallenge.app/EurekaChallenge";
+			};
+			name = Release;
+		};
+		FF40662928EE43A5008FB025 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R3RKAUHWR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Olivera-Luciano.EurekaChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EurekaChallenge;
+			};
+			name = Debug;
+		};
+		FF40662A28EE43A5008FB025 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7R3RKAUHWR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Olivera-Luciano.EurekaChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = EurekaChallenge;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF4065F028EE43A3008FB025 /* Build configuration list for PBXProject "EurekaChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF40662028EE43A5008FB025 /* Debug */,
+				FF40662128EE43A5008FB025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF40662228EE43A5008FB025 /* Build configuration list for PBXNativeTarget "EurekaChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF40662328EE43A5008FB025 /* Debug */,
+				FF40662428EE43A5008FB025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF40662528EE43A5008FB025 /* Build configuration list for PBXNativeTarget "EurekaChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF40662628EE43A5008FB025 /* Debug */,
+				FF40662728EE43A5008FB025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF40662828EE43A5008FB025 /* Build configuration list for PBXNativeTarget "EurekaChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF40662928EE43A5008FB025 /* Debug */,
+				FF40662A28EE43A5008FB025 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FF40660128EE43A3008FB025 /* EurekaChallenge.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FF40660228EE43A3008FB025 /* EurekaChallenge.xcdatamodel */,
+			);
+			currentVersion = FF40660228EE43A3008FB025 /* EurekaChallenge.xcdatamodel */;
+			path = EurekaChallenge.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FF4065ED28EE43A3008FB025 /* Project object */;
+}
