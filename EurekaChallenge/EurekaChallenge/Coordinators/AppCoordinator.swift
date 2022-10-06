@@ -13,26 +13,37 @@ import Foundation
 import UIKit
 
 protocol MasterDetailRooter {
+  func displayDetailNavigation(photoId: String)
   func displayMasterNavigation()
 }
 
 public class AppCoordinator: MainCoordinatorBase, MainCoordinator, UISplitViewControllerDelegate {
-  func start() {
-  }
-  
-    // MARK: Attributes
+   
+  // MARK: Attributes
   
   let window: UIWindow
   let splitViewController: UISplitViewController
+  var photoListCoordinator: PhotoListCoordinator? { return self.childCoordinators.first as? PhotoListCoordinator}
+  var photoDetailsCoordinator: PhotoDetailsCoordinator? { return self.childCoordinators.last as? PhotoDetailsCoordinator }
     
-  init(window:UIWindow, SplitVC: UISplitViewController){
+  init(window:UIWindow, splitVC: UISplitViewController){
     self.window = window
-    self.splitViewController = SplitVC
+    self.splitViewController = splitVC
+    
+    let masterNavVC = UINavigationController()
+    let detailNavVC = UINavigationController()
+    let masterRootVC = PhotoListViewController()
+    let detailRootVC = PhotoDetailsViewController()
+    
+    super.init(masterNavVC: masterNavVC,
+               detailNavVC: detailNavVC,
+               masterRootVC: masterRootVC,
+               detailRootVC: detailRootVC)
     
   }
   
   public func start() {
-      //    self.setUpSplitViewController(masterVC: <#UINavigationController#>, detailVC: <#UINavigationController#>)
+    self.setUpSplitViewController(masterVC: self.masterNavVC, detailVC: self.detailNavVC)
     self.showWindow(window: self.window, with: self.splitViewController)
     self.startMainCoordinators()
   }
@@ -50,7 +61,15 @@ public class AppCoordinator: MainCoordinatorBase, MainCoordinator, UISplitViewCo
   }
   
   func startMainCoordinators() {
-    var masterCoordinator: GenericCoordinatorBase
+    var masterCoordinator: GenericCoordinatorBase = PhotoListCoordinator(rootVC: masterRootVC, navVC: masterNavVC)
+    self.pushMasterCoordinator(coordinator: &masterCoordinator)
+    self.photoListCoordinator?.delegate = self
+    self.photoListCoordinator?.start()
+    
+    var detailCoordinator: GenericCoordinatorBase = PhotoDetailsCoordinator(rootVC: detailRootVC, navVC: detailNavVC)
+    self.pushDetailCoordinator(coordinator: &detailCoordinator)
+    self.photoDetailsCoordinator?.delegate = self
+    self.photoDetailsCoordinator?.start()
   }
 
 }
@@ -59,5 +78,15 @@ extension AppCoordinator: MasterDetailRooter {
   func displayMasterNavigation() {
     (self.splitViewController.viewControllers.first as?
      UINavigationController)?.popToRootViewController(animated: true)
+  }
+  
+  func displayDetailNavigation(photoId: String) {
+    switch UIDevice.current.userInterfaceIdiom {
+      case .phone:
+        self.splitViewController.showDetailViewController(self.detailNavVC, sender: nil)
+        (self.childCoordinators.last as? PhotoDetailsCoordinator)?.displayItemDetails(photoId: photoId)
+      default:
+        break
+    }
   }
 }
