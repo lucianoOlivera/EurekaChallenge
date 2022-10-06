@@ -21,7 +21,6 @@ public class PhotoListCoordinator: GenericCoordinatorBase, GenericCoordinator, P
     let photoListViewController = self.rootViewController as? PhotoListViewController
     photoListViewController?.delegate = self
   }
-
   func finish() {
     self.popCoordinator(coordinator: self)
   }

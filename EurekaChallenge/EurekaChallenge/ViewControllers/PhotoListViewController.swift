@@ -20,6 +20,16 @@ class PhotoListViewController: UIViewController {
     let photo: [String]
   }
   
+  @IBOutlet weak var CollectionView: UICollectionView!
+  
+    // MARK: Life Cycle
+  
+  public override func viewDidLoad() {
+    super.viewDidLoad()
+    self.title = "Eureka Challenge"
+    self.navigationController?.navigationBar.barTintColor = UIColor.yellow
+    self.definesPresentationContext = true
+  }
   var delegate: PhotoListViewControllerDelegate?
   var viewData: ViewData? {
     didSet {
