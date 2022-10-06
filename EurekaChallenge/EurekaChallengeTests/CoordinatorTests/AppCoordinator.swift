@@ -10,11 +10,11 @@ import XCTest
 
 class AppCoordinatorTests: XCTestCase, TestBase {
   var sut: AppCoordinator!
-  var window = UIWindow()
-  var splitVC = UISplitViewController()
+  var UIwindow = UIWindow()
+  var uisplitVC = UISplitViewController()
   
   override func setUp() {
-    self.sut = AppCoordinator(window: window, splitVC: splitVC)
+    self.sut = AppCoordinator(window: UIwindow, splitVC: uisplitVC)
     super.setUp()
   }
   
@@ -36,18 +36,18 @@ class AppCoordinatorTests: XCTestCase, TestBase {
     }
   
   
-  func testStartCoordinatorsAndViewControllersMainCoordinatorsCreates() {
+  func testStartCoordinatorsAndViewControllersMain() {
     sut.startMainCoordinators()
     
-    let masterCoordinator = sut.childCoordinators.first
-    let detailCoordinator = sut.childCoordinators.last
+    let mCoordinator = sut.childCoordinators.first
+    let dCoordinator = sut.childCoordinators.last
     
     XCTAssertEqual(sut.childCoordinators.count, 2)
-    XCTAssertEqual(masterCoordinator!.navVC, sut.masterNavVC)
-    XCTAssertEqual(detailCoordinator!.navVC, sut.detailNavVC)
-    XCTAssertEqual(masterCoordinator!.navVC.children.count, 1)
-    XCTAssertEqual(detailCoordinator!.navVC.children.count, 1)
-    XCTAssertEqual(masterCoordinator!.rootViewController, sut.masterRootVC)
-    XCTAssertEqual(detailCoordinator!.rootViewController, sut.detailRootVC)
+    XCTAssertEqual(mCoordinator!.navVC, sut.masterNavVC)
+    XCTAssertEqual(dCoordinator!.navVC, sut.detailNavVC)
+    XCTAssertEqual(mCoordinator!.navVC.children.count, 1)
+    XCTAssertEqual(dCoordinator!.navVC.children.count, 1)
+    XCTAssertEqual(mCoordinator!.rootViewController, sut.masterRootVC)
+    XCTAssertEqual(dCoordinator!.rootViewController, sut.detailRootVC)
   }
 }
