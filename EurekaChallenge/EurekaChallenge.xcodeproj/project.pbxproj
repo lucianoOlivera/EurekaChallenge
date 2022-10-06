@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		FF4065F928EE43A3008FB025 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4065F828EE43A3008FB025 /* AppDelegate.swift */; };
 		FF4065FB28EE43A3008FB025 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4065FA28EE43A3008FB025 /* SceneDelegate.swift */; };
-		FF4065FD28EE43A3008FB025 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4065FC28EE43A3008FB025 /* ViewController.swift */; };
 		FF40660028EE43A3008FB025 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF4065FE28EE43A3008FB025 /* Main.storyboard */; };
 		FF40660328EE43A3008FB025 /* EurekaChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FF40660128EE43A3008FB025 /* EurekaChallenge.xcdatamodeld */; };
 		FF40660528EE43A5008FB025 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF40660428EE43A5008FB025 /* Assets.xcassets */; };
@@ -30,6 +29,9 @@
 		FF40664828EE50DC008FB025 /* PhotoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF40664628EE50DC008FB025 /* PhotoListViewController.xib */; };
 		FF40664B28EE5534008FB025 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40664928EE5534008FB025 /* PhotoDetailsViewController.swift */; };
 		FF40664C28EE5534008FB025 /* PhotoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF40664A28EE5534008FB025 /* PhotoDetailsViewController.xib */; };
+		FF40664F28EEFDB6008FB025 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40664E28EEFDB6008FB025 /* AppCoordinator.swift */; };
+		FF40665228EEFE30008FB025 /* TestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40665128EEFE30008FB025 /* TestBase.swift */; };
+		FF40665528EEFF30008FB025 /* CoordinatorBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40665428EEFF30008FB025 /* CoordinatorBaseTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +55,6 @@
 		FF4065F528EE43A3008FB025 /* EurekaChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EurekaChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF4065F828EE43A3008FB025 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF4065FA28EE43A3008FB025 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FF4065FC28EE43A3008FB025 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FF4065FF28EE43A3008FB025 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FF40660228EE43A3008FB025 /* EurekaChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EurekaChallenge.xcdatamodel; sourceTree = "<group>"; };
 		FF40660428EE43A5008FB025 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -77,6 +78,9 @@
 		FF40664628EE50DC008FB025 /* PhotoListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoListViewController.xib; sourceTree = "<group>"; };
 		FF40664928EE5534008FB025 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		FF40664A28EE5534008FB025 /* PhotoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailsViewController.xib; sourceTree = "<group>"; };
+		FF40664E28EEFDB6008FB025 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FF40665128EEFE30008FB025 /* TestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBase.swift; sourceTree = "<group>"; };
+		FF40665428EEFF30008FB025 /* CoordinatorBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorBaseTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,7 +137,6 @@
 				FF40662B28EE445F008FB025 /* ViewControllers */,
 				FF4065F828EE43A3008FB025 /* AppDelegate.swift */,
 				FF4065FA28EE43A3008FB025 /* SceneDelegate.swift */,
-				FF4065FC28EE43A3008FB025 /* ViewController.swift */,
 				FF4065FE28EE43A3008FB025 /* Main.storyboard */,
 				FF40660428EE43A5008FB025 /* Assets.xcassets */,
 				FF40660628EE43A5008FB025 /* LaunchScreen.storyboard */,
@@ -146,6 +149,9 @@
 		FF40661128EE43A5008FB025 /* EurekaChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				FF40665328EEFF0B008FB025 /* ClasssesTest */,
+				FF40665028EEFE12008FB025 /* ProtocolsTests */,
+				FF40664D28EEFD97008FB025 /* CoordinatorTests */,
 				FF40661228EE43A5008FB025 /* EurekaChallengeTests.swift */,
 			);
 			path = EurekaChallengeTests;
@@ -199,6 +205,30 @@
 				FF40663728EE4721008FB025 /* GenericCoordinatorBase.swift */,
 			);
 			path = Classses;
+			sourceTree = "<group>";
+		};
+		FF40664D28EEFD97008FB025 /* CoordinatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF40664E28EEFDB6008FB025 /* AppCoordinator.swift */,
+			);
+			path = CoordinatorTests;
+			sourceTree = "<group>";
+		};
+		FF40665028EEFE12008FB025 /* ProtocolsTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF40665128EEFE30008FB025 /* TestBase.swift */,
+			);
+			path = ProtocolsTests;
+			sourceTree = "<group>";
+		};
+		FF40665328EEFF0B008FB025 /* ClasssesTest */ = {
+			isa = PBXGroup;
+			children = (
+				FF40665428EEFF30008FB025 /* CoordinatorBaseTests.swift */,
+			);
+			path = ClasssesTest;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,7 +373,6 @@
 				FF40664028EE4AE4008FB025 /* PhotoListCoordinator.swift in Sources */,
 				FF40664228EE4B23008FB025 /* CoordinatorBaseProtocols.swift in Sources */,
 				FF40660328EE43A3008FB025 /* EurekaChallenge.xcdatamodeld in Sources */,
-				FF4065FD28EE43A3008FB025 /* ViewController.swift in Sources */,
 				FF40663628EE46DF008FB025 /* CoordinatorBase.swift in Sources */,
 				FF40664428EE4D74008FB025 /* PhotoDetailsCoordinator.swift in Sources */,
 				FF4065F928EE43A3008FB025 /* AppDelegate.swift in Sources */,
@@ -357,6 +386,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF40661328EE43A5008FB025 /* EurekaChallengeTests.swift in Sources */,
+				FF40665228EEFE30008FB025 /* TestBase.swift in Sources */,
+				FF40664F28EEFDB6008FB025 /* AppCoordinator.swift in Sources */,
+				FF40665528EEFF30008FB025 /* CoordinatorBaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

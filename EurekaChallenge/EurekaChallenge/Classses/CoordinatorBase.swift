@@ -44,3 +44,9 @@ public class CoordinatorBase {
   }
 }
 
+extension CoordinatorBase: Equatable {
+  public static func == (lhs: CoordinatorBase, rhs: CoordinatorBase) -> Bool {
+    return (lhs.parentCordinator == rhs.parentCordinator && lhs.childCoordinators == rhs.childCoordinators)
+  }
+}
+
