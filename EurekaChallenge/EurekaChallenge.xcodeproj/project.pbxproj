@@ -31,8 +31,11 @@
 		FF40664F28EEFDB6008FB025 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40664E28EEFDB6008FB025 /* AppCoordinator.swift */; };
 		FF40665228EEFE30008FB025 /* TestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40665128EEFE30008FB025 /* TestBase.swift */; };
 		FF40665528EEFF30008FB025 /* CoordinatorBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40665428EEFF30008FB025 /* CoordinatorBaseTests.swift */; };
-		FF537D3228EF4CC900C91439 /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF537D3028EF4CC900C91439 /* ItemCollectionViewController.swift */; };
-		FF537D3328EF4CC900C91439 /* ItemCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF537D3128EF4CC900C91439 /* ItemCollectionViewController.xib */; };
+		FF537D3528EF670700C91439 /* ViewDataCompliant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF537D3428EF670700C91439 /* ViewDataCompliant.swift */; };
+		FF537D3828EF787E00C91439 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF537D3628EF787E00C91439 /* ItemCollectionViewCell.swift */; };
+		FF537D3928EF787E00C91439 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF537D3728EF787E00C91439 /* ItemCollectionViewCell.xib */; };
+		FF537D3E28EFA27F00C91439 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF537D3D28EFA27F00C91439 /* Mock.swift */; };
+		FF537D4028EFA46500C91439 /* ItemImmutableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF537D3F28EFA46500C91439 /* ItemImmutableModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +84,11 @@
 		FF40664E28EEFDB6008FB025 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FF40665128EEFE30008FB025 /* TestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBase.swift; sourceTree = "<group>"; };
 		FF40665428EEFF30008FB025 /* CoordinatorBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorBaseTests.swift; sourceTree = "<group>"; };
-		FF537D3028EF4CC900C91439 /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
-		FF537D3128EF4CC900C91439 /* ItemCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewController.xib; sourceTree = "<group>"; };
+		FF537D3428EF670700C91439 /* ViewDataCompliant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataCompliant.swift; sourceTree = "<group>"; };
+		FF537D3628EF787E00C91439 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF537D3728EF787E00C91439 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		FF537D3D28EFA27F00C91439 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
+		FF537D3F28EFA46500C91439 /* ItemImmutableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemImmutableModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +139,9 @@
 		FF4065F728EE43A3008FB025 /* EurekaChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				FF537D3C28EFA24900C91439 /* Mock */,
+				FF537D3B28EFA21A00C91439 /* inmmutableModels */,
+				FF537D3A28EF8CF600C91439 /* UIComponents */,
 				FF40663228EE4692008FB025 /* Classses */,
 				FF40662D28EE447E008FB025 /* Protocols */,
 				FF40662C28EE446B008FB025 /* Coordinators */,
@@ -176,8 +185,6 @@
 				FF40664628EE50DC008FB025 /* PhotoListViewController.xib */,
 				FF40664928EE5534008FB025 /* PhotoDetailsViewController.swift */,
 				FF40664A28EE5534008FB025 /* PhotoDetailsViewController.xib */,
-				FF537D3028EF4CC900C91439 /* ItemCollectionViewController.swift */,
-				FF537D3128EF4CC900C91439 /* ItemCollectionViewController.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				FF40664128EE4B23008FB025 /* CoordinatorBaseProtocols.swift */,
+				FF537D3428EF670700C91439 /* ViewDataCompliant.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -232,6 +240,31 @@
 				FF40665428EEFF30008FB025 /* CoordinatorBaseTests.swift */,
 			);
 			path = ClasssesTest;
+			sourceTree = "<group>";
+		};
+		FF537D3A28EF8CF600C91439 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				FF537D3628EF787E00C91439 /* ItemCollectionViewCell.swift */,
+				FF537D3728EF787E00C91439 /* ItemCollectionViewCell.xib */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		FF537D3B28EFA21A00C91439 /* inmmutableModels */ = {
+			isa = PBXGroup;
+			children = (
+				FF537D3F28EFA46500C91439 /* ItemImmutableModel.swift */,
+			);
+			path = inmmutableModels;
+			sourceTree = "<group>";
+		};
+		FF537D3C28EFA24900C91439 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				FF537D3D28EFA27F00C91439 /* Mock.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,9 +372,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF40664C28EE5534008FB025 /* PhotoDetailsViewController.xib in Resources */,
+				FF537D3928EF787E00C91439 /* ItemCollectionViewCell.xib in Resources */,
 				FF40664828EE50DC008FB025 /* PhotoListViewController.xib in Resources */,
 				FF40663E28EE4A50008FB025 /* MainSplitViewController.xib in Resources */,
-				FF537D3328EF4CC900C91439 /* ItemCollectionViewController.xib in Resources */,
 				FF40660828EE43A5008FB025 /* LaunchScreen.storyboard in Resources */,
 				FF40660528EE43A5008FB025 /* Assets.xcassets in Resources */,
 				FF40660028EE43A3008FB025 /* Main.storyboard in Resources */,
@@ -378,11 +411,14 @@
 				FF40664228EE4B23008FB025 /* CoordinatorBaseProtocols.swift in Sources */,
 				FF40660328EE43A3008FB025 /* EurekaChallenge.xcdatamodeld in Sources */,
 				FF40663628EE46DF008FB025 /* CoordinatorBase.swift in Sources */,
-				FF537D3228EF4CC900C91439 /* ItemCollectionViewController.swift in Sources */,
+				FF537D3528EF670700C91439 /* ViewDataCompliant.swift in Sources */,
 				FF40664428EE4D74008FB025 /* PhotoDetailsCoordinator.swift in Sources */,
+				FF537D4028EFA46500C91439 /* ItemImmutableModel.swift in Sources */,
 				FF4065F928EE43A3008FB025 /* AppDelegate.swift in Sources */,
+				FF537D3828EF787E00C91439 /* ItemCollectionViewCell.swift in Sources */,
 				FF40663D28EE4A50008FB025 /* MainSplitViewController.swift in Sources */,
 				FF4065FB28EE43A3008FB025 /* SceneDelegate.swift in Sources */,
+				FF537D3E28EFA27F00C91439 /* Mock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
