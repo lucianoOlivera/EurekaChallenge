@@ -7,17 +7,12 @@
 
 import UIKit
 
-protocol PhotoDetailsViewControllerDelegate {
-  func photoDetailsVCDidSelectBackButton()
-  func photoDetailsVCDidSelectBackButtonDetailsVCDidSelectBuyButton(photoURL: String)
-}
-
 public class PhotoDetailsCoordinator: GenericCoordinatorBase, GenericCoordinator {
   
     // MARK: Attributes
     var photoId: String?
     var delegate: MasterDetailRooter?
-  
+    
     // MARK: Methods
   
   init(rootVC: UIViewController, navVC: UINavigationController) {
@@ -33,3 +28,8 @@ public class PhotoDetailsCoordinator: GenericCoordinatorBase, GenericCoordinator
   }
 }
 
+extension PhotoDetailsCoordinator: PhotoDetailsViewControllerDelegate {
+  func photoDetailsVCDidSelectBackButton() {
+    self.delegate?.displayMasterNavigation()
+  }
+}
