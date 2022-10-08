@@ -21,7 +21,13 @@ public class PhotoDetailsCoordinator: GenericCoordinatorBase, GenericCoordinator
   
   public override func start() {}
   
-  public func displayItemDetails(photoId: String){}
+  public func displayItemDetails(photoId: String){
+    let photoDetailsVC = self.rootViewController as? PhotoDetailsViewController
+    // search photos id in real 
+//    guard let self = self, let item = item as? ItemImmutableModel else { return }
+//    photoDetailsVC?.delegate = self
+//    photoDetailsVC?.viewData = PhotoDetailsViewController.ViewData(photo: photo)
+  }
   
   func finish() {
     popCoordinator(coordinator: self)

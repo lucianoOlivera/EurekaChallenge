@@ -21,7 +21,6 @@ class PhotoListViewController: UIViewController, ViewDataCompliant {
   
   struct ViewData {
     var photos: [ItemImmutableModel] 
-
   }
   
   @IBOutlet weak var collectionView: UICollectionView!
