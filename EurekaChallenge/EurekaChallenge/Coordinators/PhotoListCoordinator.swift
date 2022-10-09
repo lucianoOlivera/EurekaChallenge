@@ -8,7 +8,7 @@
 import UIKit
 
 public class PhotoListCoordinator: GenericCoordinatorBase, GenericCoordinator, PhotoListViewControllerDelegate {
-  
+
     // MARK: Attributes
     var delegate: MasterDetailRooter?
   
@@ -25,8 +25,8 @@ public class PhotoListCoordinator: GenericCoordinatorBase, GenericCoordinator, P
     self.popCoordinator(coordinator: self)
   }
   
-  func photoListVCDidSelectItem(photoid photoId: String) {
-    self.delegate?.displayDetailNavigation(photoId:photoId )
+  func photoListVCDidSelectItem(photo: Photo) {
+    self.delegate?.displayDetailNavigation(photo:photo )
   }
 }
 

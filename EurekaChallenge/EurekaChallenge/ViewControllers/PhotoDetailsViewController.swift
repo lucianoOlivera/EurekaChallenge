@@ -14,23 +14,25 @@ protocol PhotoDetailsViewControllerDelegate {
 class PhotoDetailsViewController: UIViewController, ViewDataCompliant{
     // MARK: Structs 
   struct ViewData {
-    let photo: ItemImmutableModel
+    let photo: Photo
   }
-    // MARK: Attributes
+    // MARK: Attribute
+  var passedContentOffset = IndexPath()
   var delegate: PhotoDetailsViewControllerDelegate?
   var viewData: ViewData? {
     didSet{
       DispatchQueue.main.async {
+        self.collectionView.reloadData()
       }
     }
   }
   
   lazy var layoutConfiguration: UICollectionViewFlowLayout = {
     let layout = UICollectionViewFlowLayout()
-    layout.scrollDirection = .vertical
-    layout.minimumInteritemSpacing = 0
-    layout.minimumLineSpacing = 0
-    layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+    layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    layout.minimumInteritemSpacing=0
+    layout.minimumLineSpacing=0
+    layout.scrollDirection = .horizontal
     return layout
   }()
   
@@ -50,7 +52,10 @@ class PhotoDetailsViewController: UIViewController, ViewDataCompliant{
     self.title = "EurekaChallenge"
     self.navigationController?.navigationBar.barTintColor = .blue
     self.displayBackButton(userInterfaz: UIDevice.current.userInterfaceIdiom)
-    
+    self.collectionView.delegate = self
+    self.collectionView.dataSource = self
+    self.collectionView.isPagingEnabled = true
+    self.collectionView.register(PhotoPreviewFullViewCell.self,forCellWithReuseIdentifier: "Cell")
   }
   
     // MARK: Methods
@@ -66,5 +71,30 @@ class PhotoDetailsViewController: UIViewController, ViewDataCompliant{
                                        action: #selector(back(sender:)))
       self.navigationItem.leftBarButtonItem = backButton
     }
+  }
+}
+
+
+extension  PhotoDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PhotoPreviewFullViewCell
+    cell.imgView.image = self.viewData?.photo.content
+    return cell
+  }
+  
+  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    return 1 
+  }
+  
+  override func viewWillLayoutSubviews() {
+    super.viewWillLayoutSubviews()
+    
+    guard let flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
+    
+    flowLayout.itemSize = self.collectionView.frame.size
+    
+    flowLayout.invalidateLayout()
+    
+    self.collectionView.collectionViewLayout.invalidateLayout()
   }
 }

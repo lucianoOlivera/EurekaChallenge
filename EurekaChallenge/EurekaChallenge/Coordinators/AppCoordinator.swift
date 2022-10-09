@@ -13,7 +13,7 @@ import Foundation
 import UIKit
 
 protocol MasterDetailRooter {
-  func displayDetailNavigation(photoId: String)
+  func displayDetailNavigation(photo: Photo)
   func displayMasterNavigation()
 }
 
@@ -80,11 +80,11 @@ extension AppCoordinator: MasterDetailRooter {
      UINavigationController)?.popToRootViewController(animated: true)
   }
   
-  func displayDetailNavigation(photoId: String) {
+  func displayDetailNavigation(photo: Photo) {
     switch UIDevice.current.userInterfaceIdiom {
       case .phone:
         self.splitViewController.showDetailViewController(self.detailNavVC, sender: nil)
-        (self.childCoordinators.last as? PhotoDetailsCoordinator)?.displayItemDetails(photoId: photoId)
+        (self.childCoordinators.last as? PhotoDetailsCoordinator)?.displayItemDetails(photo: photo)
       default:
         break
     }

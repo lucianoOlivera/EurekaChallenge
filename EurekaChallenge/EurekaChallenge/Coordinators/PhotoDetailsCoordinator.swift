@@ -10,7 +10,6 @@ import UIKit
 public class PhotoDetailsCoordinator: GenericCoordinatorBase, GenericCoordinator {
   
     // MARK: Attributes
-    var photoId: String?
     var delegate: MasterDetailRooter?
     
     // MARK: Methods
@@ -21,12 +20,10 @@ public class PhotoDetailsCoordinator: GenericCoordinatorBase, GenericCoordinator
   
   public override func start() {}
   
-  public func displayItemDetails(photoId: String){
+  public func displayItemDetails(photo: Photo){
     let photoDetailsVC = self.rootViewController as? PhotoDetailsViewController
-    // search photos id in real 
-//    guard let self = self, let item = item as? ItemImmutableModel else { return }
-//    photoDetailsVC?.delegate = self
-//    photoDetailsVC?.viewData = PhotoDetailsViewController.ViewData(photo: photo)
+    photoDetailsVC?.delegate = self
+    photoDetailsVC?.viewData = PhotoDetailsViewController.ViewData(photo: photo)
   }
   
   func finish() {
