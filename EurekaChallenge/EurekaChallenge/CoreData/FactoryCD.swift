@@ -7,7 +7,7 @@
 
 import Foundation
 import CoreData
-
+import UIKit
 
 class Adapter {
   
@@ -23,5 +23,15 @@ class Adapter {
       print(error)
     }
     return self.photos
+  }
+  
+  func savePhoto(uiImage: UIImage){
+    let photo = Photo(context: self.context )
+    photo.content = uiImage
+    do {
+      try self.context.save()
+    } catch {
+      print(error)
+    }
   }
 }

@@ -22,7 +22,7 @@ class PhotoDetailsViewController: UIViewController, ViewDataCompliant{
   var viewData: ViewData? {
     didSet{
       DispatchQueue.main.async {
-        self.collectionView.reloadData()
+        self.collectionView?.reloadData()
       }
     }
   }
@@ -78,7 +78,7 @@ class PhotoDetailsViewController: UIViewController, ViewDataCompliant{
 extension  PhotoDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! PhotoPreviewFullViewCell
-    cell.imgView.image = self.viewData?.photo.content
+    cell.photoView.image = self.viewData?.photo.content
     return cell
   }
   

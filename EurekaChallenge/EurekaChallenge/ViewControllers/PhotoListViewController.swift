@@ -17,17 +17,15 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
   
   public var context = CoreDataManager.shared.persistentContainer.viewContext
   
-  private let reuseIdentifier = "DateCell"
+  private let reuseIdentifier = "Cell"
   
   private var photoAdapter = Adapter()
   
-    // MARK: Structs
+  var photos: [Photo] = []
   
-  struct ViewData {
-    var photos: [Photo]
-  }
+  // MARK: Structs
   
-  var photos1: [Photo] = []
+  struct ViewData {}
   
   @IBOutlet weak var takePhoto: UIButton!
   
@@ -56,7 +54,7 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
     self.navigationController?.navigationBar.barTintColor = UIColor.yellow
     self.collectionView.dataSource = self
     self.collectionView.delegate = self
-    self.collectionView.register(PhotoItemCollectionViewCell.self, forCellWithReuseIdentifier: "Cell")
+    self.collectionView.register(PhotoItemCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     self.collectionView.backgroundColor = UIColor.white
     self.collectionView.collectionViewLayout = self.layout
     self.takePhoto.translatesAutoresizingMaskIntoConstraints = false
@@ -65,7 +63,7 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
     self.takePhoto.backgroundColor = UIColor.lightGray
     self.takePhoto.layer.cornerRadius = 5
     self.takePhoto.addTarget(self, action: #selector(takePicture), for: .touchDown)
-    self.photos1 = photoAdapter.getRequestPhoto()
+    self.photos = photoAdapter.getRequestPhoto()
   }
   var delegate: PhotoListViewControllerDelegate?
   var viewData: ViewData? {
@@ -86,31 +84,25 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
   
 }
 
-
 extension PhotoListViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? PhotoItemCollectionViewCell else {
+    guard let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as? PhotoItemCollectionViewCell else {
       assertionFailure("Could not dequeue cell for row \(indexPath.row) in collection view")
       return UICollectionViewCell()
     }
-    
-    let item = self.photos1[indexPath.row] 
-    
-    
-      //    let cellViewData = PhotoItemCollectionViewCell.ViewData(imageVD:item.content)
-    
+    let item = self.photos [indexPath.row] 
     cell.img.image = item.content
     return cell
   }
   
   func collectionView(_ collectionView: UICollectionView,
                       numberOfItemsInSection section: Int) -> Int {
-    return self.photos1.count 
+    return self.photos.count
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfSections section: Int) -> Int {
-    return self.photos1.count 
+    return self.photos.count
   }
   
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
@@ -124,11 +116,7 @@ extension PhotoListViewController: UICollectionViewDataSource, UICollectionViewD
   }
   
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath){
-//    guard let photo = self.viewData?.photos[indexPath.row] else {
-//      assertionFailure("No Item for row \(indexPath.row) in collection view")
-//      return
-//    }
-    self.delegate?.photoListVCDidSelectItem(photo: photos1[indexPath.row])
+    self.delegate?.photoListVCDidSelectItem(photo: self.photos[indexPath.row] )
   }
 }
 
@@ -145,11 +133,11 @@ extension PhotoListViewController: UIImagePickerControllerDelegate, UINavigation
       return 
     }
     picker.dismiss(animated: true)
-    
-    let photo = Photo(context: self.context )
-    photo.content = image
-    
-    try? self.context.save()
+    photoAdapter.savePhoto(uiImage: image)
+    collectionLoad()
+  }
+  
+  func collectionLoad(){
     self.viewDidLoad()
     self.collectionView.reloadData()
   }
