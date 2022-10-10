@@ -39,6 +39,8 @@
 		FFC891B028F35ADF00D9493E /* FactoryCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC891AF28F35ADF00D9493E /* FactoryCD.swift */; };
 		FFC891B528F39AFD00D9493E /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC891B428F39AFC00D9493E /* LocationService.swift */; };
 		FFFCFB2928F49A7600D85FCE /* PhotoDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCFB2828F49A7600D85FCE /* PhotoDetailsCell.swift */; };
+		FFFCFB2C28F4B0E000D85FCE /* PhotoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCFB2B28F4B0E000D85FCE /* PhotoListViewController.swift */; };
+		FFFCFB2F28F4B35200D85FCE /* PhotoItemCollectionViewCellTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFFCFB2E28F4B35200D85FCE /* PhotoItemCollectionViewCellTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		FFC891AF28F35ADF00D9493E /* FactoryCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryCD.swift; sourceTree = "<group>"; };
 		FFC891B428F39AFC00D9493E /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		FFFCFB2828F49A7600D85FCE /* PhotoDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsCell.swift; sourceTree = "<group>"; };
+		FFFCFB2B28F4B0E000D85FCE /* PhotoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewController.swift; sourceTree = "<group>"; };
+		FFFCFB2E28F4B35200D85FCE /* PhotoItemCollectionViewCellTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCollectionViewCellTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +171,8 @@
 		FF40661128EE43A5008FB025 /* EurekaChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				FFFCFB2D28F4B31C00D85FCE /* UIComponentests */,
+				FFFCFB2A28F4B0A800D85FCE /* UIViewCTest */,
 				FF40665328EEFF0B008FB025 /* ClasssesTest */,
 				FF40665028EEFE12008FB025 /* ProtocolsTests */,
 				FF40664D28EEFD97008FB025 /* CoordinatorTests */,
@@ -298,6 +304,22 @@
 				FFC891B428F39AFC00D9493E /* LocationService.swift */,
 			);
 			path = LocationService;
+			sourceTree = "<group>";
+		};
+		FFFCFB2A28F4B0A800D85FCE /* UIViewCTest */ = {
+			isa = PBXGroup;
+			children = (
+				FFFCFB2B28F4B0E000D85FCE /* PhotoListViewController.swift */,
+			);
+			path = UIViewCTest;
+			sourceTree = "<group>";
+		};
+		FFFCFB2D28F4B31C00D85FCE /* UIComponentests */ = {
+			isa = PBXGroup;
+			children = (
+				FFFCFB2E28F4B35200D85FCE /* PhotoItemCollectionViewCellTest.swift */,
+			);
+			path = UIComponentests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +485,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF40665228EEFE30008FB025 /* TestBase.swift in Sources */,
+				FFFCFB2F28F4B35200D85FCE /* PhotoItemCollectionViewCellTest.swift in Sources */,
+				FFFCFB2C28F4B0E000D85FCE /* PhotoListViewController.swift in Sources */,
 				FF40664F28EEFDB6008FB025 /* AppCoordinator.swift in Sources */,
 				FF40665528EEFF30008FB025 /* CoordinatorBaseTests.swift in Sources */,
 			);
