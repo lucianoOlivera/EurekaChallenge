@@ -37,7 +37,9 @@
 		FFC891AC28F31BBC00D9493E /* UIImageTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC891AB28F31BBC00D9493E /* UIImageTransformer.swift */; };
 		FFC891AE28F3515A00D9493E /* PhotoItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC891AD28F3515A00D9493E /* PhotoItemCollectionViewCell.swift */; };
 		FFC891B028F35ADF00D9493E /* FactoryCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC891AF28F35ADF00D9493E /* FactoryCD.swift */; };
-		FFC891B228F3605400D9493E /* PhotoPreviewFullViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC891B128F3605400D9493E /* PhotoPreviewFullViewCell.swift */; };
+		FFC891B528F39AFD00D9493E /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC891B428F39AFC00D9493E /* LocationService.swift */; };
+		FFC891C228F477C300D9493E /* LabelViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC891C028F477C300D9493E /* LabelViewControllerCell.swift */; };
+		FFC891C328F477C300D9493E /* LabelViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFC891C128F477C300D9493E /* LabelViewControllerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +94,9 @@
 		FFC891AB28F31BBC00D9493E /* UIImageTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageTransformer.swift; sourceTree = "<group>"; };
 		FFC891AD28F3515A00D9493E /* PhotoItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		FFC891AF28F35ADF00D9493E /* FactoryCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryCD.swift; sourceTree = "<group>"; };
-		FFC891B128F3605400D9493E /* PhotoPreviewFullViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPreviewFullViewCell.swift; sourceTree = "<group>"; };
+		FFC891B428F39AFC00D9493E /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		FFC891C028F477C300D9493E /* LabelViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelViewControllerCell.swift; sourceTree = "<group>"; };
+		FFC891C128F477C300D9493E /* LabelViewControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelViewControllerCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 		FF4065F728EE43A3008FB025 /* EurekaChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				FFC891B328F39AE700D9493E /* LocationService */,
 				FFC8919D28F300F900D9493E /* DataSource */,
 				FFC8919628F2FACF00D9493E /* CoreData */,
 				FF537D3C28EFA24900C91439 /* Mock */,
@@ -250,7 +255,8 @@
 			isa = PBXGroup;
 			children = (
 				FFC891AD28F3515A00D9493E /* PhotoItemCollectionViewCell.swift */,
-				FFC891B128F3605400D9493E /* PhotoPreviewFullViewCell.swift */,
+				FFC891C028F477C300D9493E /* LabelViewControllerCell.swift */,
+				FFC891C128F477C300D9493E /* LabelViewControllerCell.xib */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -287,6 +293,14 @@
 				FF40660128EE43A3008FB025 /* EurekaChallenge.xcdatamodeld */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		FFC891B328F39AE700D9493E /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				FFC891B428F39AFC00D9493E /* LocationService.swift */,
+			);
+			path = LocationService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF40664C28EE5534008FB025 /* PhotoDetailsViewController.xib in Resources */,
+				FFC891C328F477C300D9493E /* LabelViewControllerCell.xib in Resources */,
 				FF40664828EE50DC008FB025 /* PhotoListViewController.xib in Resources */,
 				FF40663E28EE4A50008FB025 /* MainSplitViewController.xib in Resources */,
 				FF40660828EE43A5008FB025 /* LaunchScreen.storyboard in Resources */,
@@ -427,7 +442,8 @@
 				FF40663828EE4721008FB025 /* GenericCoordinatorBase.swift in Sources */,
 				FFC891AC28F31BBC00D9493E /* UIImageTransformer.swift in Sources */,
 				FFC8919828F2FD0900D9493E /* CoreDataManager.swift in Sources */,
-				FFC891B228F3605400D9493E /* PhotoPreviewFullViewCell.swift in Sources */,
+				FFC891B528F39AFD00D9493E /* LocationService.swift in Sources */,
+				FFC891C228F477C300D9493E /* LabelViewControllerCell.swift in Sources */,
 				FF40663428EE46B5008FB025 /* MainCoordinatorBase.swift in Sources */,
 				FF40664728EE50DC008FB025 /* PhotoListViewController.swift in Sources */,
 				FF40664028EE4AE4008FB025 /* PhotoListCoordinator.swift in Sources */,

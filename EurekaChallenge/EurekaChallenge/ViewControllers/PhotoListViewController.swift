@@ -8,6 +8,7 @@
 import UIKit
 import Foundation
 import CoreData
+import CoreLocation
 
 protocol PhotoListViewControllerDelegate {
   func photoListVCDidSelectItem(photo: Photo)
@@ -21,10 +22,11 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
   
   private var photoAdapter = Adapter()
   
+  private var locationManager = LocationService()
+  
   var photos: [Photo] = []
   
   // MARK: Structs
-  
   struct ViewData {}
   
   @IBOutlet weak var takePhoto: UIButton!
@@ -49,9 +51,7 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
   public override func viewDidLoad() {
     super.viewDidLoad()
     self.title = "Eureka Challenge"
-    self.navigationController?.navigationBar.barTintColor = UIColor.yellow
     self.definesPresentationContext = true
-    self.navigationController?.navigationBar.barTintColor = UIColor.yellow
     self.collectionView.dataSource = self
     self.collectionView.delegate = self
     self.collectionView.register(PhotoItemCollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
@@ -64,6 +64,7 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
     self.takePhoto.layer.cornerRadius = 5
     self.takePhoto.addTarget(self, action: #selector(takePicture), for: .touchDown)
     self.photos = photoAdapter.getRequestPhoto()
+    self.locationManager.delegate = self
   }
   var delegate: PhotoListViewControllerDelegate?
   var viewData: ViewData? {
@@ -75,6 +76,7 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
   }
   
   @objc func takePicture() {
+    self.locationManager.determineCurrentLocation()
     let picker = UIImagePickerController()
     picker.sourceType = .camera 
     picker.allowsEditing = true
@@ -140,6 +142,13 @@ extension PhotoListViewController: UIImagePickerControllerDelegate, UINavigation
   func collectionLoad(){
     self.viewDidLoad()
     self.collectionView.reloadData()
+  }
+}
+
+extension PhotoListViewController: LocationServiceDelegate {
+  func didUpdateLocations(_ coordinates: CLLocationCoordinate2D) {
+//    loadWeatherData(lat: String(coordinates.latitude), lon: String(coordinates.longitude))
+    print(String(coordinates.latitude),String(coordinates.longitude))
   }
 }
 
