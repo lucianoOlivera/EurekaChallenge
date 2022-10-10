@@ -76,14 +76,29 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
   }
   
   @objc func takePicture() {
-    self.locationManager.determineCurrentLocation()
-    let picker = UIImagePickerController()
-    picker.sourceType = .camera 
-    picker.allowsEditing = true
-    picker.delegate = self
-    present(picker, animated: true)
+    self.locationManager.determineCurrentLocation()    
+    if !UIImagePickerController.isSourceTypeAvailable(.camera) {
+      let alertController = UIAlertController(title: nil, message: "Device has no camera.", preferredStyle: .alert)
+      
+      let okAction = UIAlertAction(title: "Alright", style: .default, handler: { (alert: UIAlertAction!) in
+      })
+      
+      alertController.addAction(okAction)
+      self.present(alertController, animated: true, completion: nil)
+      
+    } else {
+      
+      let picker = UIImagePickerController()
+      
+      picker.sourceType = .camera 
+      picker.allowsEditing = true
+      picker.delegate = self
+      
+      present(picker, animated: true)
+    }
   }
   
+
 }
 
 extension PhotoListViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

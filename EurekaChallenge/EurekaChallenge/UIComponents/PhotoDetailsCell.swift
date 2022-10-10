@@ -2,9 +2,8 @@
 //  PhotoPreviewFullViewCell.swift
 //  EurekaChallenge
 //
-//  Created by lolivera on 09/10/2022.
+//  Created by lolivera on 10/10/2022.
 //
-
 import UIKit
 
 class PhotoPreviewFullViewCell: UICollectionViewCell, UIScrollViewDelegate {

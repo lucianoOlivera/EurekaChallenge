@@ -27,18 +27,8 @@ class PhotoDetailsViewController: UIViewController, ViewDataCompliant{
     }
   }
   
-  lazy var layoutConfiguration: UICollectionViewFlowLayout = {
-    let layout = UICollectionViewFlowLayout()
-    layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    layout.minimumInteritemSpacing=0
-    layout.minimumLineSpacing=0
-    layout.scrollDirection = .horizontal
-    return layout
-  }()
-  
   @IBOutlet weak var collectionView: UICollectionView! {
     didSet{
-      self.collectionView.collectionViewLayout = self.layoutConfiguration
     }
   }
     // MARK: Events
@@ -54,7 +44,6 @@ class PhotoDetailsViewController: UIViewController, ViewDataCompliant{
     self.displayBackButton(userInterfaz: UIDevice.current.userInterfaceIdiom)
     self.collectionView.delegate = self
     self.collectionView.dataSource = self
-    self.collectionView.isPagingEnabled = true
     self.collectionView.register(PhotoPreviewFullViewCell.self,forCellWithReuseIdentifier: "Cell")
   }
   
@@ -86,15 +75,10 @@ extension  PhotoDetailsViewController: UICollectionViewDelegate, UICollectionVie
     return 1 
   }
   
-  override func viewWillLayoutSubviews() {
-    super.viewWillLayoutSubviews()
-    
-    guard let flowLayout = self.collectionView.collectionViewLayout as? UICollectionViewFlowLayout else { return }
-    
-    flowLayout.itemSize = self.collectionView.frame.size
-    
-    flowLayout.invalidateLayout()
-    
-    self.collectionView.collectionViewLayout.invalidateLayout()
+}
+
+extension PhotoDetailsViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: self.view.frame.width , height:  self.view.frame.width)
   }
 }
