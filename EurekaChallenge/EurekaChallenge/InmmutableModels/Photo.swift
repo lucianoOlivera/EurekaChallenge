@@ -17,8 +17,8 @@ public class Photo: NSManagedObject {
   }
   
   @NSManaged public var content: UIImage?
-  @NSManaged public var title: String?
-  
+  @NSManaged public var latitude: String?
+  @NSManaged public var longitude: String?
 }
 
 extension Photo : Identifiable {

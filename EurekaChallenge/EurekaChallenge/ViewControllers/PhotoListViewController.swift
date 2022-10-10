@@ -23,6 +23,10 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
   private var photoAdapter = Adapter()
   
   private var locationManager = LocationService()
+
+  private var latitude: String?
+  
+  private var longitude: String?
   
   var photos: [Photo] = []
   
@@ -150,7 +154,10 @@ extension PhotoListViewController: UIImagePickerControllerDelegate, UINavigation
       return 
     }
     picker.dismiss(animated: true)
-    photoAdapter.savePhoto(uiImage: image)
+    
+    guard let longitude = self.longitude, self.longitude != "" else {return}
+    guard let latitude = self.latitude, self.latitude != "" else {return}
+    photoAdapter.savePhoto(uiImage: image,longitude:  longitude ,latitude: latitude )
     collectionLoad()
   }
   
@@ -162,8 +169,8 @@ extension PhotoListViewController: UIImagePickerControllerDelegate, UINavigation
 
 extension PhotoListViewController: LocationServiceDelegate {
   func didUpdateLocations(_ coordinates: CLLocationCoordinate2D) {
-//    loadWeatherData(lat: String(coordinates.latitude), lon: String(coordinates.longitude))
-    print(String(coordinates.latitude),String(coordinates.longitude))
+    self.latitude = String(coordinates.latitude)
+    self.longitude = String(coordinates.longitude)
   }
 }
 

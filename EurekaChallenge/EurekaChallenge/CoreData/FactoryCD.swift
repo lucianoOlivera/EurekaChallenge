@@ -25,9 +25,11 @@ class Adapter {
     return self.photos
   }
   
-  func savePhoto(uiImage: UIImage){
+  func savePhoto(uiImage: UIImage, longitude: String, latitude:String) {
     let photo = Photo(context: self.context )
     photo.content = uiImage
+    photo.longitude = longitude
+    photo.latitude = latitude
     do {
       try self.context.save()
     } catch {
