@@ -20,12 +20,12 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="7hD-wS-O8B">
-                    <rect key="frame" x="0.0" y="90" width="414" height="806"/>
+                    <rect key="frame" x="0.0" y="90" width="414" height="769"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <collectionViewLayout key="collectionViewLayout" id="729-gi-RYw"/>
                 </collectionView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZ8-lY-l2J">
-                    <rect key="frame" x="136" y="855" width="142" height="21"/>
+                    <rect key="frame" x="136" y="861" width="142" height="21"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain" title="Button"/>
                 </button>
@@ -33,10 +33,10 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="7hD-wS-O8B" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="90" id="2OH-F6-4m0"/>
-                <constraint firstAttribute="bottom" secondItem="7hD-wS-O8B" secondAttribute="bottom" id="6cX-Es-gtv"/>
+                <constraint firstItem="VZ8-lY-l2J" firstAttribute="top" secondItem="7hD-wS-O8B" secondAttribute="bottom" constant="2" id="52l-S8-ute"/>
                 <constraint firstAttribute="trailing" secondItem="7hD-wS-O8B" secondAttribute="trailing" id="8Jk-gf-ZKb"/>
-                <constraint firstAttribute="bottom" secondItem="VZ8-lY-l2J" secondAttribute="bottom" constant="20" symbolic="YES" id="OmS-6M-GnK"/>
                 <constraint firstAttribute="trailing" secondItem="VZ8-lY-l2J" secondAttribute="trailing" constant="136" id="b8r-Tv-Ifc"/>
+                <constraint firstAttribute="bottom" secondItem="VZ8-lY-l2J" secondAttribute="bottom" constant="14" id="dtF-e0-GjE"/>
                 <constraint firstItem="7hD-wS-O8B" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hQx-ML-fFt"/>
                 <constraint firstItem="VZ8-lY-l2J" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="136" id="wLb-BV-ivh"/>
             </constraints>

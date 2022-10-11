@@ -12,6 +12,10 @@ public class PhotoListCoordinator: GenericCoordinatorBase, GenericCoordinator, P
     // MARK: Attributes
     var delegate: MasterDetailRooterControllers?
   
+    private var photoAdapter = Adapter()
+  
+    private var locationManager = LocationService()
+  
     // MARK: Methods
     init(rootVC: UIViewController, navVC: UINavigationController) {
     super.init(rootViewController: rootVC, navVC: navVC)
@@ -20,6 +24,7 @@ public class PhotoListCoordinator: GenericCoordinatorBase, GenericCoordinator, P
   public override func start() {
     let photoListViewController = self.rootViewController as? PhotoListViewController
     photoListViewController?.delegate = self
+    photoListViewController?.viewData = PhotoListViewController.ViewData(photoAdapter: photoAdapter, locationManager: locationManager)
   }
   func finish() {
     self.popCoordinator(coordinator: self)

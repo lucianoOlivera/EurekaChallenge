@@ -20,10 +20,6 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
   
   private let reuseIdentifier = "Cell"
   
-  private var photoAdapter = Adapter()
-  
-  private var locationManager = LocationService()
-
   private var latitude: String?
   
   private var longitude: String?
@@ -31,7 +27,10 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
   var photos: [Photo] = []
   
   // MARK: Structs
-  struct ViewData {}
+  struct ViewData {
+    var photoAdapter: Adapter
+    var locationManager: LocationService
+  }
   
   @IBOutlet weak var takePhoto: UIButton!
   
@@ -63,8 +62,8 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
     self.takePhoto.backgroundColor = UIColor.lightGray
     self.takePhoto.layer.cornerRadius = 5
     self.takePhoto.addTarget(self, action: #selector(takePicture), for: .touchDown)
-    self.photos = photoAdapter.getRequestPhoto()
-    self.locationManager.delegate = self
+    self.photos = self.viewData?.photoAdapter.getRequestPhoto() ?? []
+    self.viewData?.locationManager.delegate = self
   }
   var delegate: PhotoListViewControllerDelegate?
   var viewData: ViewData? {
@@ -76,7 +75,7 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
   }
   
   @objc func takePicture() {
-    self.locationManager.determineCurrentLocation()    
+    self.viewData?.locationManager.determineCurrentLocation()    
     if !UIImagePickerController.isSourceTypeAvailable(.camera) {
       let alertController = UIAlertController(title: nil, message: "Device has no camera.", preferredStyle: .alert)
       
@@ -153,7 +152,7 @@ extension PhotoListViewController: UIImagePickerControllerDelegate, UINavigation
     
     guard let longitude = self.longitude, self.longitude != "" else {return}
     guard let latitude = self.latitude, self.latitude != "" else {return}
-    photoAdapter.savePhoto(uiImage: image,longitude:  longitude ,latitude: latitude )
+    self.viewData?.photoAdapter.savePhoto(uiImage: image,longitude:  longitude ,latitude: latitude )
     collectionLoad()
   }
   
