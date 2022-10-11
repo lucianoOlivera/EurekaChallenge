@@ -108,7 +108,7 @@ extension PhotoListViewController: UICollectionViewDataSource, UICollectionViewD
       assertionFailure("Could not dequeue cell for row \(indexPath.row) in collection view")
       return UICollectionViewCell()
     }
-    let item = self.photos [indexPath.row] 
+    let item = self.photos[indexPath.row] 
     cell.img.image = item.content
     return cell
   }
