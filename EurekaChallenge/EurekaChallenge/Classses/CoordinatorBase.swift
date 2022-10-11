@@ -21,7 +21,7 @@ public class CoordinatorBase {
     self.childCoordinators = [GenericCoordinatorBase]()
   }
   
-  func pushCoordinator(coordinator: inout GenericCoordinatorBase, 
+  func pushCoordinatorFrom(coordinator: inout GenericCoordinatorBase, 
                        rootVC: UIViewController,
                        animated: Bool = true) {
     self.childCoordinators.append(coordinator)
@@ -30,7 +30,7 @@ public class CoordinatorBase {
   }
   
     /// Removes a coordinator with all it's View Controllers.
-  func popCoordinator(coordinator: GenericCoordinatorBase, 
+  func popCoordinatorFrom(coordinator: GenericCoordinatorBase, 
                       animated: Bool = true){
     guard let coordinatorIdex = self.childCoordinators.firstIndex(where: {$0 === coordinator}) else {return}
     self.popCoordinatorRootVC(coordinate: coordinator, animated: animated)

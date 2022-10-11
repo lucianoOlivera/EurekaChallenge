@@ -30,18 +30,18 @@ public class MainCoordinatorBase: CoordinatorBase {
   }
   
   func pushMasterCoordinator(coordinator: inout GenericCoordinatorBase) {
-    super.pushCoordinator(coordinator: &coordinator, rootVC: masterRootVC)
+    super.pushCoordinatorFrom(coordinator: &coordinator, rootVC: masterRootVC)
   }
   
   func pushDetailCoordinator(coordinator: inout GenericCoordinatorBase) {
-    super.pushCoordinator(coordinator: &coordinator, rootVC: detailRootVC)
+    super.pushCoordinatorFrom(coordinator: &coordinator, rootVC: detailRootVC)
   }
   
   func popMasterCoordinator(coordinator: inout GenericCoordinatorBase) {
-    super.popCoordinator(coordinator: coordinator)
+    super.popCoordinatorFrom(coordinator: coordinator)
   }
   
   func popDetailCoordinator(coordinator: inout GenericCoordinatorBase) {
-    super.popCoordinator(coordinator: coordinator)
+    super.popCoordinatorFrom(coordinator: coordinator)
   }
 }

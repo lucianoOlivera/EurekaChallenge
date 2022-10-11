@@ -37,7 +37,7 @@ class AppCoordinatorTests: XCTestCase, TestBaseSystem {
   
   
   func testStartCoordinatorsAndViewControllersMain() {
-    sut.startMainCoordinators()
+    sut.startMainCoordinator()
     
     let mCoordinator = sut.childCoordinators.first
     let dCoordinator = sut.childCoordinators.last

@@ -10,7 +10,7 @@ import UIKit
 public class PhotoListCoordinator: GenericCoordinatorBase, GenericCoordinator, PhotoListViewControllerDelegate {
 
     // MARK: Attributes
-    var delegate: MasterDetailRooter?
+    var delegate: MasterDetailRooterControllers?
   
     // MARK: Methods
     init(rootVC: UIViewController, navVC: UINavigationController) {

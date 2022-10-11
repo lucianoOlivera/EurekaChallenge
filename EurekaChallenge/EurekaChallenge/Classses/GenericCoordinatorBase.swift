@@ -25,11 +25,11 @@ public class GenericCoordinatorBase: CoordinatorBase {
   }
   
   func pushCoordinator(coordinator: inout GenericCoordinatorBase) {
-    super.pushCoordinator(coordinator: &coordinator, rootVC:
+    super.pushCoordinatorFrom(coordinator: &coordinator, rootVC:
                             self.rootViewController)
   }
   
   func popCoordinator(coordinator: GenericCoordinatorBase) {
-    super.popCoordinator(coordinator: coordinator)
+    super.popCoordinatorFrom(coordinator: coordinator)
   }
 }

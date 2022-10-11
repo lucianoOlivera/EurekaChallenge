@@ -10,7 +10,7 @@ import UIKit
 public class PhotoDetailsCoordinator: GenericCoordinatorBase, GenericCoordinator {
   
     // MARK: Attributes
-    var delegate: MasterDetailRooter?
+    var delegate: MasterDetailRooterControllers?
     
     // MARK: Methods
   

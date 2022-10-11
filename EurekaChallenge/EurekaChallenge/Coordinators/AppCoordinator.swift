@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-protocol MasterDetailRooter {
+protocol MasterDetailRooterControllers {
   func displayDetailNavigation(photo: Photo)
   func displayMasterNavigation()
 }
@@ -41,7 +41,7 @@ public class AppCoordinator: MainCoordinatorBase, MainCoordinator, UISplitViewCo
   public func start() {
     self.setUpSplitViewController(masterVC: self.masterNavVC, detailVC: self.detailNavVC)
     self.showWindow(window: self.window, with: self.splitViewController)
-    self.startMainCoordinators()
+    self.startMainCoordinator()
   }
   
   func setUpSplitViewController(masterVC: UINavigationController, detailVC: UINavigationController){
@@ -56,7 +56,7 @@ public class AppCoordinator: MainCoordinatorBase, MainCoordinator, UISplitViewCo
     window.makeKeyAndVisible()
   }
   
-  func startMainCoordinators() {
+  func startMainCoordinator() {
     var masterCoordinator: GenericCoordinatorBase = PhotoListCoordinator(rootVC: masterRootVC, navVC: masterNavVC)
     self.pushMasterCoordinator(coordinator: &masterCoordinator)
     self.photoListCoordinator?.delegate = self
@@ -70,7 +70,7 @@ public class AppCoordinator: MainCoordinatorBase, MainCoordinator, UISplitViewCo
   
 }
 
-extension AppCoordinator: MasterDetailRooter {
+extension AppCoordinator: MasterDetailRooterControllers {
   func displayMasterNavigation() {
     (self.splitViewController.viewControllers.first as?
      UINavigationController)?.popToRootViewController(animated: true)
