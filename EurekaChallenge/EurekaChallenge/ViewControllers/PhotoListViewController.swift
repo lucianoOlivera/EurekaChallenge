@@ -43,10 +43,6 @@ class PhotoListViewController: UIViewController, ViewDataCompliant{
     layout.scrollDirection = .vertical
     layout.minimumInteritemSpacing = 0
     layout.minimumLineSpacing = 0
-      // Handle automatic layout on iPad to allow portrait and landscape modes
-    if UIDevice.current.userInterfaceIdiom == .pad {
-      layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
-    }
     return layout
   }()
   

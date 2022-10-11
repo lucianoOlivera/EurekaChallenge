@@ -20,7 +20,7 @@ class Adapter {
       let photos: [Photo] = try context.fetch(request)
       self.photos = photos
     } catch {
-      print(error)
+      assertionFailure("Could not RequestPhoto")
     }
     return self.photos
   }
@@ -33,7 +33,7 @@ class Adapter {
     do {
       try self.context.save()
     } catch {
-      print(error)
+      assertionFailure("Could not save Photo")
     }
   }
 }

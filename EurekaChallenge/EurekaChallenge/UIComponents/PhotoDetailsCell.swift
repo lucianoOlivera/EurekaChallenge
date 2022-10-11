@@ -31,7 +31,6 @@ class PhotoPreviewFullViewCell: UICollectionViewCell, UIScrollViewDelegate {
     self.addSubview(scrollPhoto)
     
     photoView = UIImageView()
-    photoView.image = UIImage(named: "user3")
     scrollPhoto.addSubview(photoView!)
     photoView.contentMode = .scaleAspectFit
   }
