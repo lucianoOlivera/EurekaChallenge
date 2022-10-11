@@ -6,10 +6,6 @@
 //
 
 import Foundation
-
-
-
-import Foundation
 import UIKit
 
 protocol MasterDetailRooter {
@@ -18,14 +14,14 @@ protocol MasterDetailRooter {
 }
 
 public class AppCoordinator: MainCoordinatorBase, MainCoordinator, UISplitViewControllerDelegate {
-   
-  // MARK: Attributes
+  
+    // MARK: Attributes
   
   let window: UIWindow
   let splitViewController: UISplitViewController
   var photoListCoordinator: PhotoListCoordinator? { return self.childCoordinators.first as? PhotoListCoordinator}
   var photoDetailsCoordinator: PhotoDetailsCoordinator? { return self.childCoordinators.last as? PhotoDetailsCoordinator }
-    
+  
   init(window:UIWindow, splitVC: UISplitViewController){
     self.window = window
     self.splitViewController = splitVC
@@ -71,7 +67,7 @@ public class AppCoordinator: MainCoordinatorBase, MainCoordinator, UISplitViewCo
     self.photoDetailsCoordinator?.delegate = self
     self.photoDetailsCoordinator?.start()
   }
-
+  
 }
 
 extension AppCoordinator: MasterDetailRooter {
