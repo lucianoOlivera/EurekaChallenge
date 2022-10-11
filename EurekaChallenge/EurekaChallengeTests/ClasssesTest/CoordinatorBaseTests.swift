@@ -9,7 +9,7 @@ import XCTest
 @testable import class EurekaChallenge.CoordinatorBase
 @testable import class EurekaChallenge.GenericCoordinatorBase
 
-class CoordinatorBaseTests: XCTestCase, TestBase {
+class CoordinatorBaseTests: XCTestCase, TestBaseSystem {
   var sut: CoordinatorBase!
   var genericCoordinatorBase: GenericCoordinatorBase!
     

@@ -8,7 +8,7 @@
 import XCTest
 @testable import class EurekaChallenge.AppCoordinator
 
-class AppCoordinatorTests: XCTestCase, TestBase {
+class AppCoordinatorTests: XCTestCase, TestBaseSystem {
   var sut: AppCoordinator!
   var UIwindow = UIWindow()
   var uisplitVC = UISplitViewController()

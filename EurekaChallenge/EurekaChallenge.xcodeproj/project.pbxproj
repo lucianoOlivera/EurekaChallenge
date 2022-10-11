@@ -28,7 +28,7 @@
 		FF40664B28EE5534008FB025 /* PhotoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40664928EE5534008FB025 /* PhotoDetailsViewController.swift */; };
 		FF40664C28EE5534008FB025 /* PhotoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF40664A28EE5534008FB025 /* PhotoDetailsViewController.xib */; };
 		FF40664F28EEFDB6008FB025 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40664E28EEFDB6008FB025 /* AppCoordinator.swift */; };
-		FF40665228EEFE30008FB025 /* TestBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40665128EEFE30008FB025 /* TestBase.swift */; };
+		FF40665228EEFE30008FB025 /* TestBaseSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40665128EEFE30008FB025 /* TestBaseSystem.swift */; };
 		FF40665528EEFF30008FB025 /* CoordinatorBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF40665428EEFF30008FB025 /* CoordinatorBaseTests.swift */; };
 		FF537D3528EF670700C91439 /* ViewDataCompliant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF537D3428EF670700C91439 /* ViewDataCompliant.swift */; };
 		FF537D3E28EFA27F00C91439 /* Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF537D3D28EFA27F00C91439 /* Mock.swift */; };
@@ -86,7 +86,7 @@
 		FF40664928EE5534008FB025 /* PhotoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailsViewController.swift; sourceTree = "<group>"; };
 		FF40664A28EE5534008FB025 /* PhotoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoDetailsViewController.xib; sourceTree = "<group>"; };
 		FF40664E28EEFDB6008FB025 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		FF40665128EEFE30008FB025 /* TestBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBase.swift; sourceTree = "<group>"; };
+		FF40665128EEFE30008FB025 /* TestBaseSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBaseSystem.swift; sourceTree = "<group>"; };
 		FF40665428EEFF30008FB025 /* CoordinatorBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorBaseTests.swift; sourceTree = "<group>"; };
 		FF537D3428EF670700C91439 /* ViewDataCompliant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDataCompliant.swift; sourceTree = "<group>"; };
 		FF537D3D28EFA27F00C91439 /* Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mock.swift; sourceTree = "<group>"; };
@@ -242,7 +242,7 @@
 		FF40665028EEFE12008FB025 /* ProtocolsTests */ = {
 			isa = PBXGroup;
 			children = (
-				FF40665128EEFE30008FB025 /* TestBase.swift */,
+				FF40665128EEFE30008FB025 /* TestBaseSystem.swift */,
 			);
 			path = ProtocolsTests;
 			sourceTree = "<group>";
@@ -484,7 +484,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF40665228EEFE30008FB025 /* TestBase.swift in Sources */,
+				FF40665228EEFE30008FB025 /* TestBaseSystem.swift in Sources */,
 				FFFCFB2F28F4B35200D85FCE /* PhotoItemCollectionViewCellTest.swift in Sources */,
 				FFFCFB2C28F4B0E000D85FCE /* PhotoListViewController.swift in Sources */,
 				FF40664F28EEFDB6008FB025 /* AppCoordinator.swift in Sources */,
